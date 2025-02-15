@@ -52,8 +52,12 @@ eventListenerProperties: {}
 additionalCatalogs:
   iceberg: |-
     connector.name=iceberg
-    hive.metastore.uri=thrift://hive-service.metastore:9083
-    hive.s3.endpoint=http://minio-service.metastore:9000
+    iceberg.catalog.type=jdbc
+    iceberg.catalog.jdbc.driver-class=org.postgresql.Driver
+    iceberg.catalog.jdbc.url=jdbc:postgresql://postgres-service:5432/metastore
+    iceberg.catalog.jdbc.username=metastore
+    iceberg.catalog.jdbc.password=password
+    hive.s3.endpoint=http://minio.minio-system.svc.cluster.local:9000
     hive.s3.path-style-access=true
     hive.s3.aws-access-key=minio
     hive.s3.aws-secret-key=minio123
