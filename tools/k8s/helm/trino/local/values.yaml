@@ -57,11 +57,13 @@ additionalCatalogs:
     iceberg.catalog.jdbc.url=jdbc:postgresql://postgres-service:5432/metastore
     iceberg.catalog.jdbc.username=metastore
     iceberg.catalog.jdbc.password=password
-    hive.s3.endpoint=http://minio.minio-system.svc.cluster.local:9000
-    hive.s3.path-style-access=true
-    hive.s3.aws-access-key=minio
-    hive.s3.aws-secret-key=minio123
     iceberg.file-format=parquet
+    iceberg.catalog.warehouse=s3a://iceberg/
+    iceberg.fs.s3a.endpoint=http://minio.minio-system.svc.cluster.local:9000
+    iceberg.fs.s3a.path.style.access=true
+    iceberg.fs.s3a.access.key=minio
+    iceberg.fs.s3a.secret.key=minio123
+    iceberg.fs.s3a.ssl.enabled=false
 
   delta: |-
     connector.name=delta_lake
