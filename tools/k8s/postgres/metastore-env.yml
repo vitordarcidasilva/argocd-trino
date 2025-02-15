@@ -27,7 +27,7 @@ data:
   ####
   # Hive Back-End Postgres
   ####
-  POSTGRES_DB: "hivemetastore"
+  POSTGRES_DB: "metastore"
   POSTGRES_USER: "metastore"
   POSTGRES_PASSWORD: "password"
   POSTGRES_HOST: "postgres-service"
