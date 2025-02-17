@@ -54,7 +54,7 @@ additionalCatalogs:
     connector.name=iceberg
     iceberg.catalog.type=jdbc
     iceberg.catalog.jdbc.driver-class=org.postgresql.Driver
-    iceberg.catalog.jdbc.url=jdbc:postgresql://postgres-service:5432/metastore
+    iceberg.catalog.jdbc.url=jdbc:postgresql://postgres-service:5432/hivemetastore
     iceberg.catalog.jdbc.username=metastore
     iceberg.catalog.jdbc.password=password
     iceberg.file-format=parquet
@@ -64,7 +64,6 @@ additionalCatalogs:
     iceberg.fs.s3a.access.key=minio
     iceberg.fs.s3a.secret.key=minio123
     iceberg.fs.s3a.ssl.enabled=false
-    iceberg.catalog.type=jdbc
 
   delta: |-
     connector.name=delta_lake
