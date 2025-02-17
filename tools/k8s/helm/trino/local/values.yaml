@@ -52,21 +52,16 @@ eventListenerProperties: {}
 additionalCatalogs:
   iceberg: |-
     connector.name=iceberg
-    iceberg.catalog.type=jdbc
-    iceberg.catalog.impl=org.apache.iceberg.jdbc.JdbcCatalog
-    iceberg.catalog.jdbc.driver-class=org.postgresql.Driver
-    iceberg.catalog.jdbc.url=jdbc:postgresql://postgres-service.metastore:5432/hivemetastore
-    iceberg.catalog.jdbc.username=metastore
-    iceberg.catalog.jdbc.password=password
-    iceberg.file-format=parquet
-    iceberg.catalog.warehouse=s3a://iceberg/
-    iceberg.storage.s3.endpoint=http://minio.minio-system.svc.cluster.local:9000
-    iceberg.storage.s3.path-style-access=true
-    iceberg.storage.s3.access-key-id=minio
-    iceberg.storage.s3.secret-access-key=minio123
-    iceberg.storage.s3.ssl.enabled=false
-    iceberg.catalog.default-namespace=teste
-    iceberg.catalog.cache-enabled=true
+    iceberg.jdbc-catalog.driver=org.postgresql.Driver
+    iceberg.jdbc-catalog.url=jdbc:postgresql://postgres-service.metastore:5432/hivemetastore
+    iceberg.jdbc-catalog.username=metastore
+    iceberg.jdbc-catalog.password=password
+    iceberg.catalog-impl=org.apache.iceberg.jdbc.JdbcCatalog
+    iceberg.warehouse=s3a://iceberg/warehouse/
+    iceberg.s3.endpoint=http://minio.minio-system.svc.cluster.local:9000
+    iceberg.s3.access-key=minio
+    iceberg.s3.secret-key=minio123
+    iceberg.s3.path-style-access=true
 
   delta: |-
     connector.name=delta_lake
