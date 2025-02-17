@@ -64,6 +64,7 @@ additionalCatalogs:
     iceberg.fs.s3a.access.key=minio
     iceberg.fs.s3a.secret.key=minio123
     iceberg.fs.s3a.ssl.enabled=false
+    iceberg.catalog.type=jdbc
 
   delta: |-
     connector.name=delta_lake
